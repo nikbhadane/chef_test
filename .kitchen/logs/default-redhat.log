@@ -1,0 +1,3 @@
+I, [2018-03-28T12:44:29.226909 #1998]  INFO -- default-redhat: -----> Destroying <default-redhat>...
+I, [2018-03-28T12:44:29.370998 #1998]  INFO -- default-redhat: EC2 instance <i-05d1458bf0e1e6426> destroyed.
+I, [2018-03-28T12:44:29.371726 #1998]  INFO -- default-redhat: Finished destroying <default-redhat> (0m0.14s).
