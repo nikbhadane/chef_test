@@ -3,7 +3,7 @@ node {
        checkout scm
    }
    stage('Build Docker image') {
-      sh 'ls -al ; git branch; df -h'
+      sh 'ls -al ; git branch; df -h; sleep 45'
       // Remove old Docker image
      // sh 'if [[ $(docker images | grep \'adtrack\') = *adtrack* ]]; then docker rmi adtrack:16.04 ; fi'
       // Build Docker image
