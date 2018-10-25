@@ -3,12 +3,13 @@ node {
        checkout scm
    }
    stage('Build Docker image') {
+      sh 'ls -al ; git branch; df -h'
       // Remove old Docker image
-      sh 'if [[ $(docker images | grep \'adtrack\') = *adtrack* ]]; then docker rmi adtrack:16.04 ; fi'
+     // sh 'if [[ $(docker images | grep \'adtrack\') = *adtrack* ]]; then docker rmi adtrack:16.04 ; fi'
       // Build Docker image
-      sh 'docker build -t adtrack:16.04 /site/target/'
+      // sh 'docker build -t adtrack:16.04 /site/target/'
       // Get the list of images        
-      sh 'docker images'
+      // sh 'docker images'
    }
   // stage('Stop and Remove existing container if exist') {
        // Verify if adtrack-16.04 container is already there
@@ -31,8 +32,8 @@ node {
      // Destroying the container.
      // sh 'docker ps -a; docker container stop devv_02; docker rm devv_02'
    //}
-   stage('Remove the image') {
+   // stage('Remove the image') {
       // Removing adtrack-16.04.
-      sh 'docker rmi adtrack:16.04'
+   //   sh 'docker rmi adtrack:16.04'
    }
 }
