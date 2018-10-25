@@ -35,5 +35,4 @@ node {
    // stage('Remove the image') {
       // Removing adtrack-16.04.
    //   sh 'docker rmi adtrack:16.04'
-   }
 }
