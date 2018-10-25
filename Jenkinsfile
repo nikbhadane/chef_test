@@ -1,9 +1,9 @@
-#!/usr/bin/env groovy
-
-node('master') {
-    // jerbs from jerbs
-    def jerbs = fileLoader.fromGit('tttest',
-        'https://github.com/nikbhadane/hellowordapp.git', 'master', null, '')
-
-    jerbs.all_the_jerbs()
+node {
+   stage('Fetch latest code') {
+       checkout scm
+   }
+   stage('Build Docker image') {
+       sh 'ls -al ; git branch; df -h; sleep 45'
+       sh 'echo "This is testing of new JenkinsFile under hellowordapp"'
+       }
 }
